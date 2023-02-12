@@ -8,6 +8,8 @@
   --primary-color: hsl(180, 100%, 50%);
   --secondary-color: hsl(120, 100%, 50%);
   --tertiary-color: hsl(60, 100%, 50%);
+  --bgForm: hsl(213, 44%, 35%);
+  --mainWidth: 200px;
 }
 /*------------------variable css----------------------*/
 .header {
@@ -36,7 +38,7 @@ hr {
 }
 
 .circle {
-  background: #32557f;
+  background: var(--bgForm);
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -48,7 +50,7 @@ hr {
   border-radius: 50%;
 }
 .half-ellipse {
-  background: #32557f;
+  background: var(--bgForm);
   width: 150px;
   height: 75px;
   display: flex;
@@ -79,7 +81,7 @@ hr {
   border-style: solid;
   border-width: 100px 70px 0px 70px;
   border-radius: 50%;
-  border-color: #32557f transparent;
+  border-color: var(--bgForm) transparent;
   filter: sepia(60%);
 }
 
@@ -92,4 +94,40 @@ hr {
   height: 0;
   display: block; /* ou inline-block */
   filter: blur(5px);
+}
+
+/*le parrallelogramme*/
+.parallelogramme {
+  margin: 20px;
+  width: 200px;
+  height: 100px;
+  background: var(--tertiary-color);
+  transform: skew(20deg);
+}
+
+/*exemple de button en parrallelogramme*/
+.parallelogramme-button {
+  position: relative;
+  padding: 0.6em 1em;
+  border: 0;
+  margin: 0.6em;
+  background: transparent;
+  font-size: 30px;
+  color: white;
+  width: var(--mainWidth);
+  display: flex;
+  justify-content: center;
+}
+
+.parallelogramme-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background: var(--bgForm);
+  transform: skew(30deg);
+  width: var(--mainWidth);
 }
