@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+} /*reset css*/
+:root {
+  --primary-color: hsl(180, 100%, 50%);
+  --secondary-color: hsl(120, 100%, 50%);
+  --tertiary-color: hsl(60, 100%, 50%);
+}
+/*------------------variable css----------------------*/
+.header {
+  width: 50px;
+  height: 50px;
+}
+
+html {
+  font-size: 100%;
+}
+body {
+  font-size: 1.4rem;
+  font-family: arial;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+.container {
+  display: flex;
+  background-color: var(--primary-color);
+  flex-wrap: wrap;
+  padding: 20px;
+}
+hr {
+  color: var(--tertiary-color);
+  margin: 10px;
+}
+
+.circle {
+  background: #32557f;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+.ellipse {
+  background: var(--tertiary-color);
+  width: 200px;
+  height: 100px;
+  border-radius: 50%;
+}
+.half-ellipse {
+  background: #32557f;
+  width: 150px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+  color: var(--secondary-color);
+}
+.half-ellipse1 {
+  border-radius: 50% / 100% 100% 0 0;
+}
+.half-ellipse2 {
+  border-radius: 50% / 0 0 100% 100%;
+}
+.half-ellipse3 {
+  border-radius: 100% 0 0 100% / 50%;
+}
+.half-ellipse4 {
+  border-radius: 0 100% 100% 0 / 50%;
+}
+.container p {
+  color: var(--secondary-color);
+}
+/*------------------- le cone et le triangle----------------------*/
+.cone {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 100px 70px 0px 70px;
+  border-radius: 50%;
+  border-color: #32557f transparent;
+  filter: sepia(60%);
+}
+
+.triangle-css {
+  border-style: solid;
+  border-color: transparent transparent var(--tertiary-color) transparent;
+  border-width: 0 100px 100px 100px;
+  background: none;
+  width: 0;
+  height: 0;
+  display: block; /* ou inline-block */
+  filter: blur(5px);
+}
