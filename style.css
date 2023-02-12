@@ -1,0 +1,9 @@
+main {
+  height: 100vh;
+}
+
+.title-Div {
+  background-image: url("img/fond-code.jpg"),
+    linear-gradient(90deg, rgba(2, 0, 36, 1) 50%, rgba(0, 51, 129, 0.3) 100%);
+  background-size: cover;
+}
